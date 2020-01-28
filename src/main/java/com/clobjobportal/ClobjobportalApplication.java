@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableAutoConfiguration
 @ComponentScan("com.clobjobportal")
+
 public class ClobjobportalApplication {
 
 	public static void main(String[] args) {
