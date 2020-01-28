@@ -18,6 +18,7 @@ public class JobController {
 public @ResponseBody String save(@RequestBody JobDetail jobDetail){
 
     System.out.println(jobDetail.getTitle());
+    if(jobDetail !=null)
     jobService.save(jobDetail);
     System.out.println(jobDetail.getTitle());
     return "200 ok : job saved sucessfully";
