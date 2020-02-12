@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org" >
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/postjob.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/home.css" >
+</head>
+<body>
+
+<ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li style="float:right"><a href="login.html">Logout</a></li>
+</ul>
+
+
+
+<form class="form-horizontal" role="form" method="POST" th:action="@{/jobpost}" th:object="${home}">
+    <div class="container">
+        <h1>Post a Job</h1>
+        <p>Please insert all the details.</p>
+        <hr>
+        <label for="jobtitle"><b>Job Title</b></label>
+        <input type="text" placeholder="Enter Job_title" name="jobtitle" id="jobtitle" required>
+
+        <label for="description"><b>Job Description</b></label><br>
+        <textarea placeholder=" Job Description" name="description" id="description" required></textarea><br>
+
+        <label for="qualification"><b>Qualification Required</b></label>
+        <input type="text" placeholder=" Qualification Required" name="qualification" id="qualification" required><br>
+
+        <label for="location"><b>Job Location</b></label>
+        <select id="location" name="location">
+            <option value="0">Select Location:</option>
+            <option value="1">Bangaluru</option>
+            <option value="2">mumbai</option>
+            <option value="3">hyderabad</option>
+            <option value="4">kolkata</option>
+            <option value="5">pune</option>
+        </select> <br><br>
+
+        <label for="jobnature"><b>Job Nature</b></label>
+        <select id="jobnature" name="jobnature">
+            <option value="0">Select Nature:</option>
+            <option value="full_time">Full Time</option>
+            <option value="Part_time">Part Time</option>
+        </select><br><br>
+
+        <label for="vacancy"><b>Vacancy</b></label>
+        <input type="text" placeholder="Vacancy Number" name="vacancy" id="vacancy" required>
+
+        <label for="salary"><b>Salary</b></label>
+        <input type="text" placeholder="Salary" name="salary" id="salary" required>
+
+        <button type="submit" class="registerbtn">POST</button>
+    </div>
+
+    <div class="container signin">
+        <p>Log out the page <a href="login.html" th:href="@{/login}">LogOut</a>.</p>
+    </div>
+</form>
+</body>
+</html>

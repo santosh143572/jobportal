@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Job List</title>
+    <link rel="stylesheet" href="css/home.css" >
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th> Job_id</th>
+        <th> Job_Title </th>
+        <th> Description </th>
+        <th> Qualification </th>
+        <th> Location </th>
+        <th> Job_Nature </th>
+        <th> Vacancy </th>
+        <th> Salary </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="jobpost : ${listjobs}">
+        <td><span th:text="${jobpost.jobid}"> jobid </span></td>
+        <td><span th:text="${jobpost.jobtitle}"> jobtitle  </span></td>
+        <td><span th:text="${jobpost.description}"> description </span></td>
+        <td><span th:text="${jobpost.qualification}"> qualification  </span></td>
+        <td><span th:text="${jobpost.location }"> location </span></td>
+        <td><span th:text="${jobpost.jobnature}"> jobnature  </span></td>
+        <td><span th:text="${jobpost.vacancy}"> vacancy </span></td>
+        <td><span th:text="${jobpost.salary}"> salary  </span></td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
