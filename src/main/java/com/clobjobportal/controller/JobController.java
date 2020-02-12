@@ -58,8 +58,6 @@ public class JobController {
 
 
 
-
-
     @RequestMapping(value = {"/editjob"}, method= RequestMethod.GET)
     public String getAlljobs(Model model)
     {
